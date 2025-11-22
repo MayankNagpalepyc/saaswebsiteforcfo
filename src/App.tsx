@@ -1,5 +1,6 @@
 import { ArrowRight, TrendingUp, Shield, Zap, BarChart3, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import GradientText from './GradientText';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -92,8 +93,22 @@ function App() {
           </div>
 
           <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold mb-8 leading-[0.95] tracking-tight">
-            crafted for the
-            <span className="block mt-2">creditworthy</span>
+            <GradientText
+              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+              animationSpeed={3}
+              showBorder={false}
+            >
+              crafted for the
+            </GradientText>
+            <span className="block mt-2">
+              <GradientText
+                colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                animationSpeed={3}
+                showBorder={false}
+              >
+                creditworthy
+              </GradientText>
+            </span>
           </h1>
 
           <p className="text-lg sm:text-xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
