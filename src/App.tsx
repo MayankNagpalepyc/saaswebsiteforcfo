@@ -85,9 +85,9 @@ function App() {
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/Screenshot 2025-11-22 at 10.02.01.png"
+            src="/Screenshot 2025-11-22 at 10.02.01 copy.png"
             alt=""
-            className="w-full h-full object-cover opacity-50"
+            className="w-full h-full object-cover opacity-60"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black"></div>
