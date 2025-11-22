@@ -92,7 +92,7 @@ function App() {
         <div className="relative z-10 max-w-6xl mx-auto text-center pt-20">
           <div className="mb-8">
             <span className="text-xs font-bold tracking-[0.3em] uppercase text-white/60">
-              Trusted by 500+ Finance Leaders
+              Trusted by 10000+ Leaders
             </span>
           </div>
 
