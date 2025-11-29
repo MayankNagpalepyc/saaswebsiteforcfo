@@ -98,8 +98,8 @@ function App() {
           </div>
 
           <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold mb-8 leading-[0.95] tracking-tight">
-            Crafted for Humans
-            <span className="block mt-2">Credit Worthy Indians</span>
+            Crafted for Non-Humans
+            <span className="block mt-2">Non-Credit-Worthy Indians</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
