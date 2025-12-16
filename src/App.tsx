@@ -1,6 +1,5 @@
 import { ArrowRight, TrendingUp, Shield, Zap, BarChart3, Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import GradientText from './GradientText';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -83,14 +82,13 @@ function App() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black">
           <img
-            src="/Screenshot 2025-11-22 at 10.02.01 copy.png"
-            alt=""
-            className="w-full h-full object-cover opacity-60"
+            src="/src/assets/files_4433893-1763106038196-Screenshot 2025-11-14 at 13.10.08.png"
+            alt="City skyline"
+            className="w-full h-full object-cover opacity-50"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto text-center pt-20">
           <div className="mb-8">
@@ -100,22 +98,8 @@ function App() {
           </div>
 
           <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold mb-8 leading-[0.95] tracking-tight">
-            <GradientText
-              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-              animationSpeed={3}
-              showBorder={false}
-            >
-              crafted for the
-            </GradientText>
-            <span className="block mt-2">
-              <GradientText
-                colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-                animationSpeed={3}
-                showBorder={false}
-              >
-                creditworthy
-              </GradientText>
-            </span>
+            Crafted for Non-Humans
+            <span className="block mt-2">Non-Credit-Worthy Indians</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
