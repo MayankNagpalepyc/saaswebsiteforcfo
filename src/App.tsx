@@ -1,4 +1,4 @@
-import { ArrowRight, TrendingUp, Shield, Zap, BarChart3, CheckCircle, Menu, X } from 'lucide-react';
+import { ArrowRight, TrendingUp, Shield, Zap, BarChart3, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 function App() {
@@ -7,59 +7,59 @@ function App() {
   const features = [
     {
       icon: TrendingUp,
-      title: 'Real-Time Financial Forecasting',
-      description: 'AI-powered predictive analytics that deliver accurate cash flow projections and scenario planning in real-time.',
-      benefits: ['95% forecast accuracy', 'Instant what-if scenarios', 'Automated variance analysis']
+      label: 'REAL-TIME FORECASTING',
+      title: 'predict with precision.',
+      description: 'AI-powered forecasting that delivers accurate cash flow projections and scenario planning in real-time.',
+      gradient: 'from-pink-500 via-purple-500 to-pink-600'
     },
     {
       icon: Shield,
-      title: 'Enterprise-Grade Compliance',
-      description: 'Stay audit-ready with automated controls, complete audit trails, and SOX/IFRS compliance built-in.',
-      benefits: ['SOX & IFRS compliant', 'Complete audit trails', 'Role-based access control']
+      label: 'COMPLIANCE & SECURITY',
+      title: 'audit-ready. always.',
+      description: 'Enterprise-grade compliance with automated controls, complete audit trails, and SOX/IFRS standards built-in.',
+      gradient: 'from-purple-500 via-blue-500 to-purple-600'
     },
     {
       icon: Zap,
-      title: 'Automated Close Process',
-      description: 'Reduce month-end close from weeks to days with intelligent automation and exception-based workflows.',
-      benefits: ['75% faster close cycles', 'Automated reconciliations', 'Smart exception handling']
+      label: 'AUTOMATED CLOSE',
+      title: 'close in days. not weeks.',
+      description: 'Reduce month-end close by 75% with intelligent automation and exception-based workflows.',
+      gradient: 'from-emerald-500 via-teal-500 to-emerald-600'
     },
     {
       icon: BarChart3,
-      title: 'Executive Dashboards',
-      description: 'Customizable real-time dashboards that give you instant visibility into key financial metrics and KPIs.',
-      benefits: ['Real-time KPI tracking', 'Board-ready reports', 'Mobile access anywhere']
+      label: 'EXECUTIVE INSIGHTS',
+      title: 'see everything. instantly.',
+      description: 'Real-time dashboards with board-ready reports and mobile access to key financial metrics.',
+      gradient: 'from-cyan-500 via-blue-500 to-cyan-600'
     }
   ];
 
-  const stats = [
-    { value: '75%', label: 'Faster Close Cycles' },
-    { value: '10hrs', label: 'Saved Per Week' },
-    { value: '95%', label: 'Forecast Accuracy' },
-    { value: '100%', label: 'Audit Ready' }
-  ];
-
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
-      <nav className="fixed w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+      <nav className="fixed w-full bg-black/80 backdrop-blur-md border-b border-white/10 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <BarChart3 className="h-8 w-8 text-blue-600" />
-              <span className="text-xl font-bold text-gray-900">FinanceOS</span>
+          <div className="flex justify-between items-center h-20">
+            <div className="flex items-center space-x-3">
+              <BarChart3 className="h-8 w-8 text-white" strokeWidth={2.5} />
+              <span className="text-2xl font-bold tracking-tight">FINANCEOS</span>
             </div>
 
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
-              <a href="#benefits" className="text-gray-600 hover:text-gray-900 transition-colors">Benefits</a>
-              <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
-              <button className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+            <div className="hidden md:flex items-center space-x-1">
+              <button className="px-6 py-2.5 text-sm font-medium text-white/70 hover:text-white transition-colors uppercase tracking-wider">
+                Features
+              </button>
+              <button className="px-6 py-2.5 text-sm font-medium text-white/70 hover:text-white transition-colors uppercase tracking-wider">
+                Pricing
+              </button>
+              <button className="ml-4 px-6 py-2.5 bg-white text-black text-sm font-bold uppercase tracking-wider hover:bg-white/90 transition-all">
                 Request Demo
               </button>
             </div>
 
             <button
-              className="md:hidden text-gray-600"
+              className="md:hidden text-white"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -68,12 +68,11 @@ function App() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 bg-white">
+          <div className="md:hidden border-t border-white/10 bg-black">
             <div className="px-4 py-4 space-y-3">
-              <a href="#features" className="block text-gray-600 hover:text-gray-900">Features</a>
-              <a href="#benefits" className="block text-gray-600 hover:text-gray-900">Benefits</a>
-              <a href="#pricing" className="block text-gray-600 hover:text-gray-900">Pricing</a>
-              <button className="w-full px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+              <button className="block w-full text-left py-2 text-white/70 hover:text-white uppercase tracking-wider text-sm font-medium">Features</button>
+              <button className="block w-full text-left py-2 text-white/70 hover:text-white uppercase tracking-wider text-sm font-medium">Pricing</button>
+              <button className="w-full px-6 py-3 bg-white text-black text-sm font-bold uppercase tracking-wider mt-4">
                 Request Demo
               </button>
             </div>
@@ -82,88 +81,108 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-blue-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full mb-6">
-              <span className="text-sm font-medium text-blue-700">Trusted by 500+ Finance Leaders</span>
-            </div>
+      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black">
+          <img
+            src="/src/assets/files_4433893-1763106038196-Screenshot 2025-11-14 at 13.10.08.png"
+            alt="City skyline"
+            className="w-full h-full object-cover opacity-50"
+          />
+        </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              Finance Operations
-              <span className="block text-blue-600">Built for CFOs</span>
-            </h1>
-
-            <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-              Transform your finance function with AI-powered automation, real-time insights, and enterprise-grade controls. Close faster, forecast better, and stay audit-ready.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="group px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all font-semibold text-lg flex items-center shadow-lg hover:shadow-xl">
-                Get Started Free
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-lg border-2 border-gray-200">
-                Watch Demo
-              </button>
-            </div>
-
-            <p className="mt-6 text-sm text-gray-500">No credit card required • 14-day free trial • Setup in minutes</p>
+        <div className="relative z-10 max-w-6xl mx-auto text-center pt-20">
+          <div className="mb-8">
+            <span className="text-xs font-bold tracking-[0.3em] uppercase text-white/60">
+              Trusted by 500+ Finance Leaders
+            </span>
           </div>
 
-          {/* Stats Bar */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-20 max-w-5xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl sm:text-5xl font-bold text-blue-600 mb-2">{stat.value}</div>
-                <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold mb-8 leading-[0.95] tracking-tight">
+            Crafted for Non-Humans
+            <span className="block mt-2">Non-Credit-Worthy Indians</span>
+          </h1>
+
+          <p className="text-lg sm:text-xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
+            FinanceOS is an exclusive platform that enables the trustworthy to make financial progress through AI-powered automation and real-time insights.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <button className="group px-8 py-4 bg-white text-black font-bold uppercase tracking-wider hover:bg-white/90 transition-all text-sm">
+              Request Demo
+            </button>
+            <button className="px-8 py-4 border border-white/30 text-white font-bold uppercase tracking-wider hover:border-white/50 transition-all text-sm">
+              Learn More
+            </button>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto pt-12 border-t border-white/10">
+            <div>
+              <div className="text-4xl sm:text-5xl font-bold mb-2">75%</div>
+              <div className="text-xs uppercase tracking-wider text-white/60">Faster Close</div>
+            </div>
+            <div>
+              <div className="text-4xl sm:text-5xl font-bold mb-2">10hrs</div>
+              <div className="text-xs uppercase tracking-wider text-white/60">Saved Weekly</div>
+            </div>
+            <div>
+              <div className="text-4xl sm:text-5xl font-bold mb-2">95%</div>
+              <div className="text-xs uppercase tracking-wider text-white/60">Accuracy</div>
+            </div>
+            <div>
+              <div className="text-4xl sm:text-5xl font-bold mb-2">100%</div>
+              <div className="text-xs uppercase tracking-wider text-white/60">Audit Ready</div>
+            </div>
           </div>
         </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Everything You Need to Scale Your Finance Operations
+          <div className="text-center mb-20">
+            <span className="text-xs font-bold tracking-[0.3em] uppercase text-white/60 mb-6 block">
+              Bit by Bit
+            </span>
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight">
+              built for control
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Purpose-built for modern finance teams who demand speed, accuracy, and control
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
                 <div
                   key={index}
-                  className="group p-8 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl hover:shadow-xl hover:border-blue-200 transition-all duration-300"
+                  className="group relative overflow-hidden bg-gradient-to-br from-gray-900 to-black border border-white/10 hover:border-white/20 transition-all duration-500"
                 >
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <div className="p-3 bg-blue-100 rounded-xl group-hover:bg-blue-600 transition-colors">
-                        <Icon className="h-7 w-7 text-blue-600 group-hover:text-white transition-colors" />
+                  <div className="relative z-10 p-8 sm:p-12 h-full flex flex-col">
+                    <div className="mb-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <Icon className="h-6 w-6 text-white/80" strokeWidth={2} />
+                        <span className="text-xs font-bold tracking-[0.2em] uppercase text-white/60">
+                          {feature.label}
+                        </span>
                       </div>
                     </div>
 
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                      <p className="text-gray-600 mb-4 leading-relaxed">{feature.description}</p>
+                    <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight tracking-tight">
+                      {feature.title}
+                    </h3>
 
-                      <ul className="space-y-2">
-                        {feature.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-center text-gray-700">
-                            <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                            <span>{benefit}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    <p className="text-white/70 leading-relaxed mb-8 flex-grow">
+                      {feature.description}
+                    </p>
+
+                    <button className="self-start flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-white group-hover:gap-4 transition-all">
+                      Know More
+                      <ArrowRight className="h-4 w-4" />
+                    </button>
                   </div>
+
+                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
                 </div>
               );
             })}
@@ -172,125 +191,145 @@ function App() {
       </section>
 
       {/* Social Proof Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Trusted by Finance Leaders at High-Growth Companies
-          </h2>
-          <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-            Join hundreds of CFOs who have transformed their finance operations
-          </p>
+      <section className="py-32 px-4 sm:px-6 lg:px-8 bg-black border-t border-white/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <span className="text-xs font-bold tracking-[0.3em] uppercase text-white/60 mb-6 block">
+              The Trusted
+            </span>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
+              built by leaders. for leaders.
+            </h2>
+          </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-            <div className="p-8 bg-gray-800 rounded-xl">
-              <p className="text-lg mb-6 italic leading-relaxed">
+          <div className="grid lg:grid-cols-3 gap-6">
+            <div className="group relative p-10 bg-gradient-to-br from-gray-900 to-black border border-white/10 hover:border-white/20 transition-all duration-500">
+              <p className="text-lg sm:text-xl mb-10 leading-relaxed text-white/90">
                 "FinanceOS reduced our close cycle from 12 days to 3 days. The ROI was immediate and measurable."
               </p>
-              <div className="flex items-center justify-center">
-                <div className="text-left">
-                  <div className="font-semibold">Sarah Chen</div>
-                  <div className="text-sm text-gray-400">CFO, TechCorp</div>
-                </div>
+              <div>
+                <div className="font-bold text-lg mb-1">Sarah Chen</div>
+                <div className="text-xs uppercase tracking-wider text-white/50">CFO, TechCorp</div>
               </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
 
-            <div className="p-8 bg-gray-800 rounded-xl">
-              <p className="text-lg mb-6 italic leading-relaxed">
+            <div className="group relative p-10 bg-gradient-to-br from-gray-900 to-black border border-white/10 hover:border-white/20 transition-all duration-500">
+              <p className="text-lg sm:text-xl mb-10 leading-relaxed text-white/90">
                 "Finally, a financial platform that understands enterprise compliance requirements. Best decision we made."
               </p>
-              <div className="flex items-center justify-center">
-                <div className="text-left">
-                  <div className="font-semibold">Michael Roberts</div>
-                  <div className="text-sm text-gray-400">VP Finance, Global Industries</div>
-                </div>
+              <div>
+                <div className="font-bold text-lg mb-1">Michael Roberts</div>
+                <div className="text-xs uppercase tracking-wider text-white/50">VP Finance, Global Industries</div>
               </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
 
-            <div className="p-8 bg-gray-800 rounded-xl sm:col-span-2 lg:col-span-1">
-              <p className="text-lg mb-6 italic leading-relaxed">
+            <div className="group relative p-10 bg-gradient-to-br from-gray-900 to-black border border-white/10 hover:border-white/20 transition-all duration-500">
+              <p className="text-lg sm:text-xl mb-10 leading-relaxed text-white/90">
                 "The forecasting accuracy is game-changing. We now have complete confidence in our financial projections."
               </p>
-              <div className="flex items-center justify-center">
-                <div className="text-left">
-                  <div className="font-semibold">Jennifer Martinez</div>
-                  <div className="text-sm text-gray-400">CFO, Innovate Labs</div>
-                </div>
+              <div>
+                <div className="font-bold text-lg mb-1">Jennifer Martinez</div>
+                <div className="text-xs uppercase tracking-wider text-white/50">CFO, Innovate Labs</div>
               </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            Ready to Transform Your Finance Operations?
+      <section className="relative py-40 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-transparent to-blue-600/20"></div>
+
+        <div className="relative z-10 max-w-5xl mx-auto text-center">
+          <span className="text-xs font-bold tracking-[0.3em] uppercase text-white/60 mb-8 block">
+            Join The Exclusive
+          </span>
+
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
+            ready to transform<br />your operations?
           </h2>
-          <p className="text-xl mb-10 text-blue-100">
+
+          <p className="text-xl text-white/70 mb-12 max-w-2xl mx-auto">
             Join leading CFOs who are closing faster, forecasting better, and scaling with confidence.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="group px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-50 transition-all font-semibold text-lg flex items-center shadow-xl">
-              Start Free Trial
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <button className="group px-10 py-5 bg-white text-black font-bold uppercase tracking-wider hover:bg-white/90 transition-all text-sm flex items-center gap-3">
+              Request Demo
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="px-8 py-4 bg-transparent text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg border-2 border-white">
-              Schedule Demo
+            <button className="px-10 py-5 border border-white/30 text-white font-bold uppercase tracking-wider hover:border-white/50 transition-all text-sm">
+              Contact Sales
             </button>
           </div>
 
-          <p className="mt-8 text-blue-100">
-            14-day free trial • No credit card required • Setup in under 10 minutes
-          </p>
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-white/50 uppercase tracking-wider">
+            <span>14-day free trial</span>
+            <span>•</span>
+            <span>No credit card required</span>
+            <span>•</span>
+            <span>Setup in minutes</span>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-black border-t border-white/10 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div className="grid md:grid-cols-4 gap-12 mb-16">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <BarChart3 className="h-6 w-6 text-blue-500" />
-                <span className="text-lg font-bold text-white">FinanceOS</span>
+              <div className="flex items-center space-x-3 mb-6">
+                <BarChart3 className="h-7 w-7 text-white" strokeWidth={2.5} />
+                <span className="text-xl font-bold tracking-tight text-white">FINANCEOS</span>
               </div>
-              <p className="text-sm">Enterprise finance operations platform built for modern CFOs.</p>
+              <p className="text-sm text-white/60 leading-relaxed">
+                Enterprise finance operations platform built for modern CFOs.
+              </p>
             </div>
 
             <div>
-              <h4 className="text-white font-semibold mb-4">Product</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Security</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Integrations</a></li>
+              <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-white mb-6">Product</h4>
+              <ul className="space-y-3 text-sm">
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors">Features</a></li>
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors">Pricing</a></li>
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors">Security</a></li>
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors">Integrations</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-white font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+              <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-white mb-6">Company</h4>
+              <ul className="space-y-3 text-sm">
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors">About</a></li>
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors">Careers</a></li>
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors">Contact</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-white font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Compliance</a></li>
+              <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-white mb-6">Legal</h4>
+              <ul className="space-y-3 text-sm">
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors">Privacy</a></li>
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors">Terms</a></li>
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors">Compliance</a></li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-gray-800 pt-8 text-center text-sm">
-            <p>&copy; 2025 FinanceOS. All rights reserved.</p>
+          <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-white/50 uppercase tracking-wider">
+              &copy; 2025 FinanceOS. All rights reserved.
+            </p>
+            <div className="flex gap-6 text-xs text-white/50 uppercase tracking-wider">
+              <a href="#" className="hover:text-white transition-colors">Twitter</a>
+              <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
+              <a href="#" className="hover:text-white transition-colors">GitHub</a>
+            </div>
           </div>
         </div>
       </footer>
