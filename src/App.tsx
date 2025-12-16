@@ -1,5 +1,6 @@
 import { ArrowRight, TrendingUp, Shield, Zap, BarChart3, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import SplitText from './components/SplitText';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -91,10 +92,30 @@ function App() {
             </span>
           </div>
 
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold mb-8 leading-[0.95] tracking-tight">
-            crafted for the
-            <span className="block mt-2">creditworthy</span>
-          </h1>
+          <div className="mb-8">
+            <SplitText
+              text="crafted for the"
+              tag="h1"
+              className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[0.95] tracking-tight"
+              delay={40}
+              duration={0.8}
+              from={{ opacity: 0, y: 60, rotateX: -90 }}
+              to={{ opacity: 1, y: 0, rotateX: 0 }}
+              threshold={0.2}
+              rootMargin="0px"
+            />
+            <SplitText
+              text="creditworthy"
+              tag="h1"
+              className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[0.95] tracking-tight block mt-2"
+              delay={40}
+              duration={0.8}
+              from={{ opacity: 0, y: 60, rotateX: -90 }}
+              to={{ opacity: 1, y: 0, rotateX: 0 }}
+              threshold={0.2}
+              rootMargin="0px"
+            />
+          </div>
 
           <p className="text-lg sm:text-xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
             FinanceOS is an exclusive platform that enables the trustworthy to make financial progress through AI-powered automation and real-time insights.
