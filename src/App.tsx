@@ -83,7 +83,14 @@ function App() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black">
+          <img
+            src="/Screenshot 2025-11-22 at 10.02.01.png"
+            alt=""
+            className="w-full h-full object-cover opacity-40"
+          />
+        </div>
+        <div className="absolute inset-0 bg-black/40"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto text-center pt-20">
           <div className="mb-8">
